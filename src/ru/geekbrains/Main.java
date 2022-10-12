@@ -9,7 +9,7 @@ public class Main {
         int a = 1;
         short b = 2;
         long c = 3;
-        float d = 4;
+        float d = 4f;
         double f = 5.6;
 
         // Character types
@@ -18,11 +18,23 @@ public class Main {
 
         // Boolean types
         boolean isFlag = false;
+
+        System.out.println("3. ==============================");
+        System.out.println("Результат вычисления " + a + "*(" + b + "+(" + c + "/" + d + ")) - " + SomeMathFunc(a, b, c, d));
+        System.out.println("4. ==============================");
+        System.out.println("Результат вычисления - " + isIntervalValid(a, b));
+        System.out.println("5. ==============================");
+        printSign(b);
+        System.out.println("6. ==============================");
+        System.out.println("Результат вычисления - " + isUnderZero(a));
+        System.out.println("7. ==============================");
+        GreteengsUser("Jhon");
+        System.out.println("8. ==============================");
+        LeapYear(2021);
     }
 
     // 3. Написать метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,где a, b, c, d – входные параметры этого метода;
-    public static int SomeMathFunc(int a, int b, int c, int d) {
-
+    public static float SomeMathFunc(float a, float b, float c, float d) {
         return a * (b + (c/d));
     }
 
@@ -34,11 +46,7 @@ public class Main {
 
     // 5. Написать метод, которому в качестве параметра передается целое число, метод должен напечатать в консоль положительное ли число передали, или отрицательное; Замечание: ноль считаем положительным числом.
     public static void printSign(int a) {
-        if (a >= 0) {
-            System.out.println("Число \t" + a + "\tположительное");
-        } else {
-            System.out.println("Число \t" + a + "\tотрицательное");
-        }
+        System.out.println(a >= 0 ? "Число \t" + a + "\tположительное" : "Число \t" + a + "\tотрицательное");
     }
 
     // 6. Написать метод, которому в качестве параметра передается целое число, метод должен вернуть true, если число отрицательное;
@@ -67,7 +75,5 @@ public class Main {
         } else {
             System.out.println(startMsg + " = не високосный");
         }
-
     }
-
 }
